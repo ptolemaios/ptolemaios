@@ -131,6 +131,7 @@ b = repo.commit('fd649f98dd084ca28dbcfead6cff55414b7bb977')
 diff = a.diff(b)
 for diff_added in diff.iter_change_type('M'):
     print(diff_added.a_blob.path)
+    print(diff_added.a_blob.name)
     #print(diff_added.b_blob.data_stream.read())
 for diff_added in diff.iter_change_type('A'):
     print(diff_added.a_blob.path)
